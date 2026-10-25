@@ -2,4 +2,4 @@ FROM mongo:8
 
 EXPOSE 27017
 
-CMD ["mongod", "--bindipall"]
+CMD ["mongod", "--bind_ip_all"]
