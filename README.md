@@ -17,7 +17,6 @@ PE-CS624-RyanCasalino/
 ├── PE02/                           # Practice Exercise 02: Degree Requirements Explorer
 │   ├── README.md                   # PE02 150-word Input-Process-Output Analysis Report
 │   └── HelloWorld/                 # Expo React Native mobile app with full asset resolution
-├── PE03 -> PE03-todos              # Symlink for PE03 navigation
 └── PE03-todos/                     # Practice Exercise 03: todos Application
     ├── README.md                   # PE03 150-word Input-Process-Output Analysis Report
     ├── screenshots/                # Verification screenshots for PE03 Part 1
