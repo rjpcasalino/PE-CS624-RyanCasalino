@@ -16,7 +16,8 @@
         packages = with pkgs; [ nodejs yarn docker-client ];
 
         shellHook = ''
-          export npm_config_cache="$PWD/.npm-cache"
+          ROOT_DIR="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")"
+          export npm_config_cache="$ROOT_DIR/.npm-cache"
           export PATH="$PWD/node_modules/.bin:$PATH"
 
           echo "⚡ MERN + Expo Dev Environment"
@@ -33,9 +34,9 @@
           if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
             echo "Building MongoDB image..."
             docker build \
-              --file "$PWD/Dockerfile.mongodb" \
+              --file "$ROOT_DIR/Dockerfile.mongodb" \
               --tag "$IMAGE" \
-              "$PWD" || exit 1
+              "$ROOT_DIR" || exit 1
           fi
 
           if docker container inspect "$CONTAINER" >/dev/null 2>&1; then
