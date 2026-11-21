@@ -25,17 +25,22 @@ PE-CS624-RyanCasalino/
 │   ├── Input.js                    # Root re-export of Input component
 │   ├── Button.js                   # Root re-export of Button component
 │   └── src/app/                    # Core React Native / Expo application components
-└── PE04/                           # Practice Exercise 04: Profile Cards
-    ├── README.md                   # PE04 150-word Input-Process-Output Analysis Report
-    ├── screenshots/                # Verification screenshots (Part 1 & Part 2)
-    ├── Part1/                      # Part 1: Single Profile Card with Styled Text
-    │   ├── App.js                  # Root re-export of App container
-    │   ├── assets/                 # App icons and user avatar
-    │   └── src/app/App.js          # Section 4.3 styled text component
-    └── Part2/                      # Part 2: 6-Card Expandable Flexbox Gallery
-        ├── App.js                  # Root re-export of App container
-        ├── assets/                 # App icons and user avatar
-        └── src/app/App.js          # Section 5.3 flexbox gallery with thumbnail toggles
+├── PE04/                           # Practice Exercise 04: Profile Cards
+│   ├── README.md                   # PE04 150-word Input-Process-Output Analysis Report
+│   ├── screenshots/                # Verification screenshots (Part 1 & Part 2)
+│   ├── Part1/                      # Part 1: Single Profile Card with Styled Text
+│   │   ├── App.js                  # Root re-export of App container
+│   │   ├── assets/                 # App icons and user avatar
+│   │   └── src/app/App.js          # Section 4.3 styled text component
+│   └── Part2/                      # Part 2: 6-Card Expandable Flexbox Gallery
+│       ├── App.js                  # Root re-export of App container
+│       ├── assets/                 # App icons and user avatar
+│       └── src/app/App.js          # Section 5.3 flexbox gallery with thumbnail toggles
+└── PE05-CitiesWithCountriesCurrency/ # Practice Exercise 05: Cities with Countries and Currency
+    ├── README.md                   # PE05 150-word Input-Process-Output Analysis Report
+    ├── screenshots/                # Verification screenshots (Figures 1-5)
+    ├── App.js                      # 4-tab Bottom Tab Navigator (CitiesNav, AddCity, Countries, AddCountry)
+    └── src/                        # Cities, AddCity, Countries, AddCountry, components, and theme
 ```
 
 ---
@@ -66,6 +71,11 @@ PE-CS624-RyanCasalino/
 - Interactive thumbnail-expansion mechanism toggling between miniature card thumbnail (`transform: [{ scale: 0.2 }]`) and full-sized detailed view (`300x400`) upon touch interaction.
 - Comprehensive 150-word Input-Process-Output (IPO) model analysis report and verification screenshots.
 
+### [PE05: Cities with Countries and Currency](PE05-CitiesWithCountriesCurrency/README.md)
+- Extended HOS07 CitiesApp with two additional bottom navigation tabs: `Countries` and `AddCountry`.
+- Accepts Country Name and Currency via controlled `TextInput` fields, generates unique IDs with `react-native-uuid`, and renders the saved countries and currencies list.
+- Comprehensive 150-word Input-Process-Output (IPO) model analysis report and verification screenshots.
+
 ---
 
 ## Getting Started
@@ -92,4 +102,7 @@ cd PE04/Part1 && npx expo start
 
 # Run PE04 - Part 2 (6-Card Flexbox Gallery)
 cd PE04/Part2 && npx expo start
+
+# Run PE05 (Cities with Countries and Currency)
+cd PE05-CitiesWithCountriesCurrency && npx expo start
 ```
